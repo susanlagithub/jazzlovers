@@ -357,6 +357,10 @@ footer a {
     margin-top: 20px;
 }
 
+.artists-container h2 span{
+    color: #fb0254;
+}
+
 .artists-container .container-s {
     overflow-x: auto;
 }
