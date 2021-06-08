@@ -367,7 +367,7 @@ footer a {
 
 .artist-card-container {
     display: flex;
-    width: 3280px;
+    width: 3312px;
     justify-content: space-evenly;
 }
 
@@ -377,6 +377,8 @@ footer a {
     height: 400px;
     border-radius: 25px;
     margin-bottom: 70px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .artist-card img {
