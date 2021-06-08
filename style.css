@@ -271,6 +271,7 @@ footer a {
     height: 50px;
     background-size: 50px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .list-play {
