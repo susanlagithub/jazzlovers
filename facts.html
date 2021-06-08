@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JazzLovers | Jazz Facts</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <h1><span>Jazz</span>Lovers</h1>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listen.html">Listen to Jazz</a></li>
+                <li><a href="facts.html" class="nav-selected">Jazz Facts</a></li>
+                <li><a href="artists.html">Artists</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="fact-hero" id="fact_1">
+        <div class="container">
+            <div class="fact-hero-wrapper">
+                <div class="fact-item">
+                    <span class="fact-num">1</span>
+                    <h2><span>Jazz</span> Started Out As Pop.</h2>
+                    <p>
+                        Believe it or not, jazz started out as pop. It was one the most popular genres in 1920s America.
+                        It was created from a fusion of ragtime, European chamber elements, marching band music, and the
+                        blues.
+                    </p>
+                    <a class="btn btn-secondary btn-next" onclick="goNextFact('fact_2')">Next Fact</a>
+                </div>
+                <div class="fact-item">
+                    <img src="imgs/fact_1.png" alt="Jazz player" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fact-hero fact-hero-light" id="fact_2">
+        <div class="container">
+            <div class="fact-hero-wrapper">
+                <div class="fact-item">
+                    <img src="imgs/fact_2.png" alt="Jazz player" />
+                </div>
+                <div class="fact-item">
+                    <span class="fact-num">2</span>
+                    <h2>Word <span>Jazz</span> Comes From.</h2>
+                    <p>
+                        The precise origin of the word "jazz" is a mystery. No one knows exactly where it came from,
+                        although there are many speculations. Some say that it was originally a slang word that was
+                        spelled in many different ways: jaz, jas, jass, and jasz.
+                    </p>
+                    <a class="btn btn-secondary btn-next" onclick="goNextFact('fact_3')">Next Fact</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="fact-hero" id="fact_3">
+        <div class="container">
+            <div class="fact-hero-wrapper">
+                <div class="fact-item">
+                    <span class="fact-num">3</span>
+                    <h2><span>Jazz</span> Is Full Of Secret Signals.</h2>
+                    <p>
+                        As you know if you are a musician, there are many ways that we communicate. When jazz players
+                        are performing together, they will often nod to signal the end of the piece or point their
+                        fingers at their heads. When they do the latter, it's because it's time to play the head: the
+                        first and last chorus of a song.
+                    </p>
+                    <a class="btn btn-secondary btn-next" onclick="goNextFact('fact_4')">Next Fact</a>
+                </div>
+                <div class="fact-item">
+                    <img src="imgs/fact_3.png" alt="Jazz player" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fact-hero fact-hero-light" id="fact_4">
+        <div class="container">
+            <div class="fact-hero-wrapper">
+                <div class="fact-item">
+                    <img src="imgs/fact_4.png" alt="Jazz player" />
+                </div>
+                <div class="fact-item">
+                    <span class="fact-num">4</span>
+                    <h2><span>Jazz</span> Is Popular Again.</h2>
+                    <p>
+                        Believe it or not, jazz is becoming popular again. There are quite a few very successful jazz
+                        artists. Hip-hop infused jazz, "hot jazz," and world jazz are the most popular subgenres these
+                        days.
+                    </p>
+                    <a class="btn btn-secondary btn-next" onclick="goNextFact('fact_5')">Next Fact</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="fact-hero" id="fact_5">
+        <div class="container">
+            <div class="fact-hero-wrapper">
+                <div class="fact-item">
+                    <span class="fact-num">5</span>
+                    <h2><span>Jazz</span> Inspired Many Dance Styles.</h2>
+                    <p>
+                        If you love to dance, you will be pleased to learn that jazz music inspired many different
+                        styles. These include the Charleston, the Lindy Hop, and the Mambo. After all, it's hard not to
+                        dance when you hear such soulful music.
+                    </p>
+                    <a class="btn btn-secondary btn-next" onclick="goNextFact('fact_6')">Next Fact</a>
+                </div>
+                <div class="fact-item">
+                    <img src="imgs/fact_5.png" alt="Jazz player" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fact-hero fact-hero-light" id="fact_6">
+        <div class="container">
+            <div class="fact-hero-wrapper">
+                <div class="fact-item">
+                    <img src="imgs/fact_6.png" alt="Jazz player" />
+                </div>
+                <div class="fact-item">
+                    <span class="fact-num">6</span>
+                    <h2><span>Jazz</span> Boosts Creativity.</h2>
+                    <p>
+                        If you're struggling with motivation, it might be time to listen to some John Coltrane or
+                        Charlie Parker. This will likely inspire you to complete your latest project. Listening to jazz
+                        music activates your most highly creative (theta) brain waves.
+                    </p>
+                    <a class="btn btn-secondary btn-top" onclick="goNextFact('fact_1')">Back To Top</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>2021 Project by Susan Ryan | CS80</div>
+        <div>
+            <a href='https://www.freepik.com/psd/flyer'>Home vector created by freepik</a> |
+            <a href="https://audionautix.com/free-music/jazz">Jazz music downloaded from audionautix</a>
+        </div>
+    </footer>
+    <script>
+        function goNextFact(item) {
+            var element_to_scroll_to = document.getElementById(item);
+            element_to_scroll_to.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JazzLovers | Listen to Jazz</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <h1><span>Jazz</span>Lovers</h1>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listen.html" class="nav-selected">Listen to Jazz</a></li>
+                <li><a href="facts.html">Jazz Facts</a></li>
+                <li><a href="artists.html">Artists</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container audio-container">
+       
+        <span class="audio-player">
+            <img src="imgs/player_default.png" class="audio-player-img" alt="Default Player Title" />
+            <h3 class="audio-player-title">Play your fav Jazz song</h3>
+            <span class="audio-player-mood"></span>
+            <audio controls id="audioPlayer" class="hidden" data-id="0">
+                <source src="mp3/BeBop25.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </span>
+        <div class="audio-list-container">
+            <ul class="audio-list">
+                <li>
+                    <a id="1" onclick="changeURL(this)" data-src="BeBop25.mp3">
+                        <img id="listImg_1" class="list-img" src="mp3/covers/BeBop25.jpg" alt="Bebop 25 Song" />
+                        <div>
+                            <span id="listTitle_1" class="list-title">Bebop 25</span>
+                            <span id="listMood_1" class="list-mood">Mood: Bouncy, Grooving</span>
+                            <span class="list-tempo">Tempo: Fast</span>
+                        </div>
+                        <span id="btnPlay_1" class="list-btn list-play"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="2" onclick="changeURL(this)" data-src="BigSwingBand.mp3">
+                        <img id="listImg_2" class="list-img" src="mp3/covers/BigSwingBand.jpg"
+                            alt="Big Swing Band Song" />
+                        <div>
+                            <span id="listTitle_2" class="list-title">Big Swing Band</span>
+                            <span id="listMood_2" class="list-mood">Mood: Grooving, Bright</span>
+                            <span class="list-tempo">Tempo: Fast</span>
+                        </div>
+                        <span id="btnPlay_2" class="list-btn list-play"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="3" onclick="changeURL(this)" data-src="sidewayssamba.mp3">
+                        <img id="listImg_3" class="list-img" src="mp3/covers/sidewayssamba.jpg"
+                            alt="Sideways Samba Song" />
+                        <div>
+                            <span id="listTitle_3" class="list-title">Sideways Samba</span>
+                            <span id="listMood_3" class="list-mood">Mood: Relaxing, Calming, Bright</span>
+                            <span class="list-tempo">Tempo: Medium</span>
+                        </div>
+                        <span id="btnPlay_3" class="list-btn list-play"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="4" onclick="changeURL(this)" data-src="SaloonRag.mp3">
+                        <img id="listImg_4" class="list-img" src="mp3/covers/saloonrag.jpg" alt="Saloon Rag Song" />
+                        <div>
+                            <span id="listTitle_4" class="list-title">Saloon Rag</span>
+                            <span id="listMood_4" class="list-mood">Mood: Happy, Goofy, Silly</span>
+                            <span class="list-tempo">Tempo: Medium</span>
+                        </div>
+                        <span id="btnPlay_4" class="list-btn list-play"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="5" onclick="changeURL(this)" data-src="ILikePeanuts.mp3">
+                        <img id="listImg_5" class="list-img" src="mp3/covers/ilikepeanuts.jpg"
+                            alt="I Like Peanuts Song" />
+                        <div>
+                            <span id="listTitle_5" class="list-title">I Like Peanuts</span>
+                            <span id="listMood_5" class="list-mood">Mood: Humorous, Bouncy, Bright</span>
+                            <span class="list-tempo">Tempo: Fast</span>
+                        </div>
+                        <span id="btnPlay_5" class="list-btn list-play"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="6" onclick="changeURL(this)" data-src="JumpinBoogieWoogie.mp3">
+                        <img id="listImg_6" class="list-img" src="mp3/covers/JumpinBoogieWoogie.jpg"
+                            alt="Jumpin Boogie Woogie" />
+                        <div>
+                            <span id="listTitle_6" class="list-title">Jumpin Boogie Woogie</span>
+                            <span id="listMood_6" class="list-mood">Mood: Grooving, Bouncy, Bright</span>
+                            <span class="list-tempo">Tempo: Fast</span>
+                        </div>
+                        <span id="btnPlay_6" class="list-btn list-play"></span>
+                    </a>
+                </li>
+            </ul>
+            <div id="hd"></div>
+        </div>
+    </section>
+    <footer>
+        <div>2021 Project by Susan Ryan | CS80</div>
+        <div>
+            <a href='https://www.freepik.com/psd/flyer'>Home vector created by freepik</a> |
+            <a href="https://audionautix.com/free-music/jazz">Jazz music downloaded from audionautix</a>
+        </div>
+    </footer>
+
+    <script>
+        var audioPlayer = document.getElementById("audioPlayer");
+        var playerImg = document.querySelector('.audio-player-img');
+        var playerTitle = document.querySelector('.audio-player-title');
+        var playerMood = document.querySelector('.audio-player-mood');
+        let hd = document.getElementById("hd");
+        hd.style.display = "none"; // used to trigger puase/play
+        
+
+        audioPlayer.onpause = function () {
+            let aId = audioPlayer.getAttribute('data-id');
+            let selctedTitle = document.getElementById("listTitle_" + aId);
+            let selectedBtn = document.getElementById("btnPlay_" + aId);
+
+            selctedTitle.classList.remove('selected');
+            selectedBtn.classList.add('list-play');
+            selectedBtn.classList.remove('list-pause');
+        };
+
+        audioPlayer.onplay = function () {
+            let aId = audioPlayer.getAttribute('data-id');
+
+            let selctedTitle = document.getElementById("listTitle_" + aId);
+            let selectedBtn = document.getElementById("btnPlay_" + aId);
+
+            // changing the style of clicked song with pink color to indicate that it's playing
+            selctedTitle.classList.add('selected');
+            selectedBtn.classList.remove('list-play');
+            selectedBtn.classList.add('list-pause');
+        };
+
+        function changeURL(el) {
+          
+
+            audioPlayer.style.display = "block";
+            // get item clicked id
+            let id = el.getAttribute('id');
+            audioPlayer.setAttribute('data-id', id);
+
+            // get elements to of the selected song
+            let img = document.getElementById("listImg_" + id);
+            let title = document.getElementById("listTitle_" + id);
+            let mood = document.getElementById("listMood_" + id);
+
+            // updating the player information
+            playerImg.src = img.src;
+            playerTitle.innerText = title.innerText;
+            playerMood.innerText = mood.innerText;
+
+            // Create a current source variable to track play/pause functions
+            // When users clicks one the same song, we want to create a pause effect rather than reload the song again
+            let currentSrc = '';
+            let src = audioPlayer.src;
+            currentSrc = src.replace(/^.*[\\\/]/, '');
+
+            // clicking on the item when it's playing
+            if (currentSrc == el.getAttribute('data-src')) {
+                // if we are clicking on the same song again, we will trigger pause/play functions
+                if (hd.style.display === "none") {
+                    // pause
+                    audioPlayer.pause();
+                    hd.style.display = "block";
+                } else {
+                    //play
+                    audioPlayer.play();
+                    hd.style.display = "none";
+                }
+            }
+            else {
+               // if new song is clicked, we assign new src to the player 
+                audioPlayer.src = 'mp3/' + el.getAttribute('data-src');
+                hd.style.display = "none";
+                audioPlayer.play();
+
+                // remove selected style from other songs
+                listBtns = document.querySelectorAll('.list-btn');
+                listTitles = document.querySelectorAll('.list-title');
+
+                // removing selected style from other song lists
+                for (var i = 0, len = listBtns.length; i < len; i++) {
+                    listBtns[i].classList.remove('list-pause');
+                    listBtns[i].classList.add('list-play');
+                }
+                for (var i = 0, len = listTitles.length; i < len; i++) {
+                    listTitles[i].classList.remove('selected');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
