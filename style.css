@@ -424,7 +424,7 @@ footer a {
     border-radius: 25px;
     background-size: 20px;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 0.9;
     transition: all ease-in-out 0.15s;
 }
 
@@ -441,7 +441,7 @@ footer a {
 }
 
 .disabled {
-    opacity: 0.2;
+    opacity: 0.3;
     cursor: default;
 }
 
@@ -450,5 +450,5 @@ footer a {
 }
 
 .btn-step.disabled:hover {
-    opacity: 0.2;
+    opacity: 0.3;
 }
