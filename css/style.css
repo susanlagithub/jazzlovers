@@ -362,7 +362,7 @@ footer a {
 }
 
 .artists-container .container-s {
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .artist-card-container {
