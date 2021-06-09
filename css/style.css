@@ -33,7 +33,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    color: #505565;
+    color: #7b839a;
     font-size: 13px;
 }
 
@@ -41,6 +41,12 @@ footer a {
     color: #7b839a;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+footer a.pink {
+    color: #fb0254;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .logo h1 {
@@ -357,7 +363,7 @@ footer a {
     margin-top: 20px;
 }
 
-.artists-container h2 span{
+.artists-container h2 span {
     color: #fb0254;
 }
 
