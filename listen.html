@@ -24,10 +24,10 @@
     </header>
     <section class="container audio-container">
         <div class="audio-player">
-            <img src="imgs/player_default.png" class="audio-player-img" alt="Default Player Title" />
-            <h3 class="audio-player-title">Play your fav Jazz song</h3>
-            <span class="audio-player-mood"></span>
-            <audio controls id="audioPlayer" class="hidden" data-id="0">
+            <img src="imgs/covers/BeBop25.jpg" class="audio-player-img" alt="Default Player Title" />
+            <h3 class="audio-player-title">Bebop 25</h3>
+            <span class="audio-player-mood">Mood: Bouncy, Grooving</span>
+            <audio controls id="audioPlayer" class="hhidden" data-id="0">
                 <source src="mp3/BeBop25.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
@@ -102,6 +102,18 @@
                             <span class="list-tempo">Tempo: Fast</span>
                         </div>
                         <span id="btnPlay_6" class="list-btn list-play"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="7" onclick="changeURL(this)" data-src="OkeyDokeySmokey.mp3">
+                        <img id="listImg_7" class="list-img" src="imgs/covers/OkeyDokeySmokey.jpg"
+                            alt="Okey Dokey Smokey" />
+                        <div>
+                            <span id="listTitle_7" class="list-title">Okey Dokey Smokey</span>
+                            <span id="listMood_7" class="list-mood">Mood: Bouncy, Grooving, Relaxing</span>
+                            <span class="list-tempo">Tempo: Medium</span>
+                        </div>
+                        <span id="btnPlay_7" class="list-btn list-play"></span>
                     </a>
                 </li>
             </ul>
