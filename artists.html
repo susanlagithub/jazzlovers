@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>JazzLovers | Artists</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" type="image/png" href="imgs/favicon.png">
 </head>
 
@@ -34,7 +34,7 @@
         <div class="container container-s">
             <div class="artist-card-container">
                 <div class="artist-card start_1">
-                    <img src="artists/louis_armstrong.jpg" alt="Louis Armstrong" />
+                    <img src="imgs/artists/louis_armstrong.jpg" alt="Louis Armstrong" />
                     <div class="artist-card-info">
                         <h3>Louis Armstrong</h3>
                         <span class="card-title">American trumpeter</span>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/john_coltrane.jpg" alt="Louis Armstrong" />
+                    <img src="imgs/artists/john_coltrane.jpg" alt="Louis Armstrong" />
                     <div class="artist-card-info">
                         <h3>John Coltrane</h3>
                         <span class="card-title">American saxophonist</span>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/dukeellington.jpg" alt="Duke Ellington" />
+                    <img src="imgs/artists/dukeellington.jpg" alt="Duke Ellington" />
                     <div class="artist-card-info">
                         <h3>Duke Ellington</h3>
                         <span class="card-title">American composer</span>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="artist-card start_2">
-                    <img src="artists/charlie_parker.jpg" alt="Charlie Parker" />
+                    <img src="imgs/artists/charlie_parker.jpg" alt="Charlie Parker" />
                     <div class="artist-card-info">
                         <h3>Charlie Parker</h3>
                         <span class="card-title">American composer</span>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/thelonious_monk.jpg" alt="Thelonious Monk" />
+                    <img src="imgs/artists/thelonious_monk.jpg" alt="Thelonious Monk" />
                     <div class="artist-card-info">
                         <h3>Thelonious Monk</h3>
                         <span class="card-title">American pianist</span>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/ella_fitzgerald.jpg" alt="Ella Fitzgerald" />
+                    <img src="imgs/artists/ella_fitzgerald.jpg" alt="Ella Fitzgerald" />
                     <div class="artist-card-info">
                         <h3>Ella Fitzgerald</h3>
                         <span class="card-title">American jazz singer</span>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/dizzy_gillespie.jpg" alt="Dizzy Gillespie" />
+                    <img src="imgs/artists/dizzy_gillespie.jpg" alt="Dizzy Gillespie" />
                     <div class="artist-card-info">
                         <h3>Dizzy Gillespie</h3>
                         <span class="card-title">American bandleader</span>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="artist-card end_2 start_2">
-                    <img src="artists/charles_mingus.jpg" alt="Charles Mingus" />
+                    <img src="imgs/artists/charles_mingus.jpg" alt="Charles Mingus" />
                     <div class="artist-card-info">
                         <h3>Charles Mingus</h3>
                         <span class="card-title">American jazz pianist</span>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/billie_holiday.jpg" alt="Billie Holiday" />
+                    <img src="imgs/artists/billie_holiday.jpg" alt="Billie Holiday" />
                     <div class="artist-card-info">
                         <h3>Billie Holiday</h3>
                         <span class="card-title">American singer</span>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/herbie_hancock.jpg" alt="Herbie Hancock" />
+                    <img src="imgs/artists/herbie_hancock.jpg" alt="Herbie Hancock" />
                     <div class="artist-card-info">
                         <h3>Herbie Hancock</h3>
                         <span class="card-title">American pianist</span>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artists/miles_davis.jpg" alt="Miles Davis" />
+                    <img src="imgs/artists/miles_davis.jpg" alt="Miles Davis" />
                     <div class="artist-card-info">
                         <h3>Miles Davis</h3>
                         <span class="card-title">American trumpeter</span>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="artist-card end_3">
-                    <img src="artists/count_basie.jpg" alt="Count Basie" />
+                    <img src="imgs/artists/count_basie.jpg" alt="Count Basie" />
                     <div class="artist-card-info">
                         <h3>Count Basie</h3>
                         <span class="card-title">American jazz pianist</span>
@@ -147,40 +147,10 @@
     <footer>
         <div>2021 Project by Susan Ryan | CS80</div>
         <div>
-            <a href='https://www.freepik.com/psd/flyer'>Home vector created by freepik</a> |
+            <a href='https://www.freepik.com/vectors/music'>Music vectors created by pch.vector</a> |
             <a href="https://audionautix.com/free-music/jazz">Jazz music downloaded from audionautix</a>
         </div>
     </footer>
-
-    <script>
-        var currentPosition = 1;
-        var nextBtn = document.getElementById('nextBtn');
-        var prvBtn = document.getElementById('prvBtn');
-
-        function goNext() {
-            currentPosition = currentPosition + 1;
-            if (currentPosition <= 3) {
-                let element_to_scroll_to = document.querySelector('.end_' + currentPosition);
-                element_to_scroll_to.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-            if (currentPosition == 3) { nextBtn.classList.add('disabled') } else { nextBtn.classList.remove('disabled'); }
-            prvBtn.classList.remove('disabled');
-        }
-
-        function goPrv() {
-            currentPosition = (currentPosition == 1) ? currentPosition : currentPosition - 1;
-
-            if (currentPosition >= 1) {
-                let element_to_scroll_to = document.querySelector('.start_' + currentPosition);
-                element_to_scroll_to.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-            if (currentPosition == 1) { prvBtn.classList.add('disabled') } else { prvBtn.classList.remove('disabled'); }
-            nextBtn.classList.remove('disabled');
-        }
-    </script>
+    <script type="text/javascript" src="js/artists.js"></script> 
 </body>
 </html>
